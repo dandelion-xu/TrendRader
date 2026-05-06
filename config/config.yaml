@@ -41,7 +41,7 @@ app:
 # ===============================================================
 schedule:
   enabled: true                         # 是否启用调度系统
-  preset: "morning_evening"             # 预设模板名称（见上方说明）
+  preset: "night_owl"             # 预设模板名称（见上方说明）
 
 
 # ===============================================================
@@ -104,7 +104,7 @@ rss:
   freshness_filter:
     enabled: true                     # 是否启用新鲜度过滤（默认启用）
 
-    max_age_days: 1                   # 最大文章年龄（天）
+    max_age_days: 30                   # 最大文章年龄（天）
                                       # - 正整数：只推送 N 天内的文章
                                       # - 0：禁用过滤，推送所有文章
 
@@ -126,6 +126,31 @@ rss:
     - id: "yahoo-finance"
       name: "雅虎财经"
       url: "https://finance.yahoo.com/news/rssindex"
+
+    - id: "SpaceNews"
+      name: "SpaceNews"
+      url: "https://spacenews.com/feed/"
+      max_age_days: 20
+
+
+    - id: "Ars Technica"
+      name: "Ars Technica"
+      url: "https://arstechnica.com/science/feed/"
+
+    - id: "Spaceflight Now"
+      name: "Spaceflight Now"
+      url: "https://spaceflightnow.com/feed/"
+      max_age_days: 10
+
+    - id: "Via Satellite"
+      name: "Via Satellite"
+      url: "https://www.satellitetoday.com/feed/"
+      max_age_days: 10
+
+    - id: "ESA Commercialisation"
+      name: "ESA Commercialisation"
+      url: "https://www.esa.int/rssfeed/Services/Commercialisation"
+      max_age_days: 10
 
     # 自定义源示例
     # - id: "custom-feed"
@@ -151,7 +176,7 @@ rss:
 # - incremental：最少打扰，只看新增
 # ===============================================================
 report:
-  mode: "current"                     # daily | current | incremental（schedule 开启时作为默认值）
+  mode: "daily"                     # daily | current | incremental（schedule 开启时作为默认值）
 
   display_mode: "keyword"             # 分组维度: keyword | platform
                                       # keyword: 按关键词分组显示（默认）
@@ -164,7 +189,7 @@ report:
 
   rank_threshold: 5                   # 排名高亮阈值（影响展示强调，不改变抓取范围）
 
-  max_news_per_keyword: 0             # 每个关键词/标签最大显示数量（0=不限制，仅影响展示裁剪）
+  max_news_per_keyword: 20             # 每个关键词/标签最大显示数量（0=不限制，仅影响展示裁剪）
 
 
 # ===============================================================
