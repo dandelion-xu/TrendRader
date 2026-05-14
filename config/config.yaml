@@ -116,12 +116,6 @@ rss:
     - id: "hacker-news"
       name: "Hacker News"
       url: "https://hnrss.org/frontpage"
-
-    - id: "ruanyifeng"
-      name: "阮一峰的网络日志"
-      url: "http://www.ruanyifeng.com/blog/atom.xml"
-      enabled: false                  # 禁用
-      # max_age_days: 3               # 示例：推送 3 天内的文章（更新较慢的博客）
      
     - id: "yahoo-finance"
       name: "雅虎财经"
@@ -151,6 +145,23 @@ rss:
       name: "ESA Commercialisation"
       url: "https://www.esa.int/rssfeed/Services/Commercialisation"
       max_age_days: 10
+
+    - id: "Spaceflightnow"
+      name: "spaceflightnow"
+      url: "https://spaceflightnow.com/feed"
+      max_age_days: 30
+
+    - id: "spaceintelreport"
+      name: "spaceintelreport"
+      url: "https://www.spaceintelreport.com/feed"
+
+    - id: "36kr"
+      name: "36kr"
+      url: "https://docs.rsshub.app/routes/new-media"
+
+    - id: "观察者网"
+      name: "观察者网"
+      url: "https://rsshub.app/guancha/headline"
 
     # 自定义源示例
     # - id: "custom-feed"
@@ -187,9 +198,9 @@ report:
   # false: 按匹配到的热点条数排序（条数多的在前）
   sort_by_position_first: false
 
-  rank_threshold: 5                   # 排名高亮阈值（影响展示强调，不改变抓取范围）
+  rank_threshold: 15                   # 排名高亮阈值（影响展示强调，不改变抓取范围）
 
-  max_news_per_keyword: 20             # 每个关键词/标签最大显示数量（0=不限制，仅影响展示裁剪）
+  max_news_per_keyword: 30             # 每个关键词/标签最大显示数量（0=不限制，仅影响展示裁剪）
 
 
 # ===============================================================
